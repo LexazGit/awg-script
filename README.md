@@ -2,6 +2,17 @@
 
 Автоматическая установка AmneziaWG + wg-easy v15 на Ubuntu 22.04.
 
+*Скрипт писался под себя, если кому пригодится буду рад*
+
+## Подготовка сервера
+ 
+Перед запуском скрипта обновите систему и перезагрузитесь:
+ 
+```bash
+apt update && apt upgrade -y
+reboot
+```
+
 ## Установка
 
 ```bash
@@ -17,7 +28,7 @@ curl -O https://raw.githubusercontent.com/LexazGit/awg-script/main/install_awg.s
 
 ## Требования
 
-- не ниже Ubuntu 22.04 LTS, выше не тестировалось
+- не ниже Ubuntu 22.04 LTS, выше не тестировалось, но подержка Ubuntu 24 у Amnezia есть
 
 
 ## После установки
