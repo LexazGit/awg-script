@@ -20,6 +20,11 @@ if [ "$EUID" -ne 0 ]; then
   error "Запустите скрипт от root: sudo bash install_awg.sh"
 fi
 
+# --- Проверка необходимости перезагрузки ---
+if [ -f /var/run/reboot-required ]; then
+  error "Система требует перезагрузки после обновления ядра. Выполните reboot и запустите скрипт повторно."
+fi
+
 # --- Проверка версии Ubuntu ---
 . /etc/os-release
 if [ "$VERSION_ID" == "22.04" ]; then
